@@ -36,7 +36,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/root/init.shooter.usb.rc:root/init.shooter.usb.rc \
     device/htc/shooter/prebuilt/root/ueventd.shooter.rc:root/ueventd.shooter.rc
 
-
 # Temporary hack
 ADDITIONAL_DEFAULT_PROPERTIES += \
     persist.service.adb.enable=1
@@ -46,8 +45,6 @@ PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/system/lib/hw/audio.primary.default.so:system/lib/hw/audio.primary.default.so \
     device/htc/shooter/prebuilt/system/lib/hw/audio_policy.default.so:system/lib/hw/audio_policy.default.so \
     device/htc/shooter/prebuilt/system/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
-
-
 
 #Add touchscreen config file
 PRODUCT_COPY_FILES += \
@@ -99,8 +96,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Camera
- PRODUCT_PACKAGES += \
-     camera.msm8660
+PRODUCT_COPY_FILES += \
+    device/htc/shooter/prebuilt/system/lib/libcamera.so:obj/lib/libcamera.so \
+    device/htc/shooter/prebuilt/system/lib/libcamera.so:system/lib/libcamera.so \
+    device/htc/shooter/prebuilt/system/lib/hw/camera.default.so:system/lib/hw/camera.default.so
 
 # Audio
 #PRODUCT_PACKAGES += \
@@ -114,6 +113,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     copybit.msm8660 \
     gralloc.msm8660 \
+    overlay.msm8660 \
     hwcomposer.msm8660
 
 # Qcom
@@ -124,10 +124,10 @@ PRODUCT_PACKAGES += \
     libQcomUI
 
 # Omx
-PRODUCT_PACKAGES += \
-    libOmxCore \
-    libOmxVenc \
-    libOmxVdec
+#PRODUCT_PACKAGES += \
+#    libOmxCore \
+#    libOmxVenc \
+#    libOmxVdec
 
 # Misc
 PRODUCT_PACKAGES += \

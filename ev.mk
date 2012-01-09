@@ -16,7 +16,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_shooter BUILD_ID=GRJ22 BUILD_FI
 
 # Set up the product codename, build version & MOTD.
 PRODUCT_CODENAME := e3d
-PRODUCT_VERSION_DEVICE_SPECIFIC := alpha6
+PRODUCT_VERSION_DEVICE_SPECIFIC := alpha8
 
 PRODUCT_MOTD :="Welcome to ics-deck"
 
@@ -32,7 +32,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
     vendor/cm/overlay/qhd
 
 # USB
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    persist.sys.usb.config=mass_storage
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#    persist.sys.usb.config=mass_storage
 
 #ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
