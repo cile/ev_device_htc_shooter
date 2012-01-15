@@ -97,9 +97,12 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    device/htc/shooter/prebuilt/system/lib/libcamera.so:obj/lib/libcamera.so \
-    device/htc/shooter/prebuilt/system/lib/libcamera.so:system/lib/libcamera.so \
-    device/htc/shooter/prebuilt/system/lib/hw/camera.default.so:system/lib/hw/camera.default.so
+    device/htc/shooter/prebuilt/system/lib/libcamera-shooter.so:obj/lib/libcamera-shooter.so \
+    device/htc/shooter/prebuilt/system/lib/libcamera-shooter.so:system/lib/libcamera-shooter.so \
+    device/htc/shooter/prebuilt/system/lib/libcameraSP.so:system/lib/libcameraSP.so \
+    device/htc/shooter/prebuilt/system/lib/libcameraSP.so:obj/lib/libcameraSP.so
+
+    #device/htc/shooter/prebuilt/system/lib/hw/camera.msm8660.so:system/lib/hw/camera.msm8660.so
 
 # Audio
 #PRODUCT_PACKAGES += \
