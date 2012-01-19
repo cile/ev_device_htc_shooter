@@ -96,13 +96,15 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Camera
+#PRODUCT_PACKAGES += \
+#    camera.msm8660
+
+# Camera
 PRODUCT_COPY_FILES += \
     device/htc/shooter/prebuilt/system/lib/libcamera-shooter.so:obj/lib/libcamera-shooter.so \
     device/htc/shooter/prebuilt/system/lib/libcamera-shooter.so:system/lib/libcamera-shooter.so \
     device/htc/shooter/prebuilt/system/lib/libcameraSP.so:system/lib/libcameraSP.so \
     device/htc/shooter/prebuilt/system/lib/libcameraSP.so:obj/lib/libcameraSP.so
-
-    #device/htc/shooter/prebuilt/system/lib/hw/camera.msm8660.so:system/lib/hw/camera.msm8660.so
 
 # Audio
 #PRODUCT_PACKAGES += \
@@ -127,10 +129,10 @@ PRODUCT_PACKAGES += \
     libQcomUI
 
 # Omx
-#PRODUCT_PACKAGES += \
-#    libOmxCore \
-#    libOmxVenc \
-#    libOmxVdec
+PRODUCT_PACKAGES += \
+    libOmxCore \
+    libOmxVenc \
+    libOmxVdec
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -195,7 +197,6 @@ PRODUCT_COPY_FILES += \
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
 
 PRODUCT_LOCALES += en
 

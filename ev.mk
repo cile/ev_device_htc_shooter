@@ -23,16 +23,14 @@ PRODUCT_MOTD :="Welcome to ics-deck"
 PRODUCT_PACKAGES += \
     Camera
 
-# Copy compatible prebuilt files
-#PRODUCT_COPY_FILES +=  \
-#    vendor/ev/prebuilt/qhd/media/bootanimation.zip:system/media/bootanimation.zip
-
 # qHD overlay
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/cm/overlay/qhd
 
-# USB
-#ADDITIONAL_DEFAULT_PROPERTIES += \
-#    persist.sys.usb.config=mass_storage
+# Hot reboot
+PRODUCT_PACKAGE_OVERLAYS += \
+    vendor/ev/overlay/hot_reboot
 
-#ADDITIONAL_DEFAULT_PROPERTIES += persist.sys.usb.config=mtp,adb
+# USB
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    persist.sys.usb.config=mass_storage
